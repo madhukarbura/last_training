@@ -24,5 +24,14 @@ for i in range(e):
     union(sv,ev)
     adj[sv][ev]=wv
     adj[ev][sv]=wv
-
+a=find(1)
+ans=10000
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        if adj[i][j]!=0:
+            x=find(i)
+            y=find(j)
+            if x==a and y==a:
+                ans=min(ans,adj[i][j])
+print(ans)
     
